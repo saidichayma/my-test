@@ -8,7 +8,8 @@ import { updateProductForm } from "../../../actions/products";
 
 class UpdateFormContainer extends Component {
   render() {
-    const { product, categories, dispatch } = this.props;
+    const { product, categories, dispatch, updateProductForm, history } =
+      this.props;
 
     if (!product) {
       return null;
@@ -41,6 +42,4 @@ const mapStateToProps = (state, { productId }) => {
   };
 };
 
-export default connect(mapStateToProps, { updateProductForm })(
-  UpdateFormContainer
-);
+export default connect(mapStateToProps, updateProductForm)(UpdateFormContainer);

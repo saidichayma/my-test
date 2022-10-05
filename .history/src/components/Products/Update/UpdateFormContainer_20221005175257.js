@@ -41,6 +41,4 @@ const mapStateToProps = (state, { productId }) => {
   };
 };
 
-export default connect(mapStateToProps, { updateProductForm })(
-  UpdateFormContainer
-);
+export default connect(mapStateToProps)(UpdateFormContainer);

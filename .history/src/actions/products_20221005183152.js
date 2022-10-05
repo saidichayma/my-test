@@ -37,13 +37,11 @@ export const fetchProducts = () => (dispatch) => {
   dispatch(receiveProducts(json));
 };
 
-export const updateProductForm =
-  (id, data) =>
-  (dispatch, getState, { history }) => {
-    console.log(data);
-    dispatch(updateProduct(id, data));
-    history.push("/");
-  };
+export const updateProductForm = (id, data) => console.log(data);
+(dispatch, getState, { history }) => {
+  dispatch(updateProduct(id, data));
+  history.push("/");
+};
 
 export const createProductForm =
   (data) =>

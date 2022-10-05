@@ -18,7 +18,7 @@ class UpdateFormContainer extends Component {
       <>
         <Link to="/">Home</Link>
         <ProductForm
-          onSave={(id, data) => updateProductForm(id, data)}
+          onSave={(productId, data) => updateProductForm(productId, data)}
           product={product}
           categories={categories}
         />
@@ -41,6 +41,4 @@ const mapStateToProps = (state, { productId }) => {
   };
 };
 
-export default connect(mapStateToProps, { updateProductForm })(
-  UpdateFormContainer
-);
+export default connect(mapStateToProps, updateProductForm)(UpdateFormContainer);

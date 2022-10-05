@@ -30,7 +30,7 @@ class UpdateFormContainer extends Component {
 UpdateFormContainer.propTypes = {
   product: PropTypes.object,
   categories: PropTypes.array,
-  history: PropTypes.object,
+
   updateProductForm: PropTypes.func.isRequired,
 };
 
@@ -41,6 +41,4 @@ const mapStateToProps = (state, { productId }) => {
   };
 };
 
-export default connect(mapStateToProps, { updateProductForm })(
-  UpdateFormContainer
-);
+export default connect(mapStateToProps, updateProductForm)(UpdateFormContainer);

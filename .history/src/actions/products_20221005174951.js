@@ -40,9 +40,8 @@ export const fetchProducts = () => (dispatch) => {
 export const updateProductForm =
   (id, data) =>
   (dispatch, getState, { history }) => {
-    console.log(data);
     dispatch(updateProduct(id, data));
-    history.push("/");
+    this.props.history.push("/");
   };
 
 export const createProductForm =
