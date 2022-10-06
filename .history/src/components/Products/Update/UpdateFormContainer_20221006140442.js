@@ -18,7 +18,7 @@ class UpdateFormContainer extends Component {
       <>
         <Link to="/">Home</Link>
         <ProductForm
-          onSave={(data) => updateProductForm(this.props.productId, data)}
+          onSave={(data) => this.props.updateProductForm(data)}
           product={product}
           categories={categories}
         />

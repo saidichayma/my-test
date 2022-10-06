@@ -28,7 +28,6 @@ const ProductForm = (props) => {
   useEffect(() => {
     resetErrors();
   }, []);
-
   const [name, setName] = useState(product.name || "");
   const [brand, setBrand] = useState(product.brand || "");
   const [rating, setRating] = useState(product.rating || 0);
@@ -142,7 +141,7 @@ const ProductForm = (props) => {
         <Label for="expirationDate">Expiration date</Label>
         <Input
           type="date"
-          invalid={ErrorHandlers && ErrorHandlers["expirationDate"]}
+          //invalid={ErrorHandlers && ErrorHandlers["expirationDate"]}
           name="expirationDate"
           id="expirationDate"
           value={expirationDate}
@@ -156,7 +155,7 @@ const ProductForm = (props) => {
         <Label for="receiptDate">Receipt date</Label>
         <Input
           type="date"
-          invalid={ErrorHandlers && ErrorHandlers["receiptDate"]}
+          //invalid={ErrorHandlers && ErrorHandlers["receiptDate"]}
           name="receiptDate"
           id="receiptDate"
           value={receiptDate}

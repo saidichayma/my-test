@@ -14,11 +14,7 @@ class App extends Component {
           <Route exact path="/" component={ProductsContainer} />,
           <Route
             path="/edit/:productId"
-            render={({ match }) => (
-              <UpdateFormContainer
-                productId={parseInt(match.params.productId)}
-              />
-            )}
+            render={({ match }) => <UpdateFormContainer productId />}
           />
           ,
           <Route path="/add" component={AddFormContainer} />,

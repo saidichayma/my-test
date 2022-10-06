@@ -16,7 +16,7 @@ class App extends Component {
             path="/edit/:productId"
             render={({ match }) => (
               <UpdateFormContainer
-                productId={parseInt(match.params.productId)}
+                productId={parseInt(match.params.productId) + 1}
               />
             )}
           />

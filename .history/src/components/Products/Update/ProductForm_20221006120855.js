@@ -28,7 +28,6 @@ const ProductForm = (props) => {
   useEffect(() => {
     resetErrors();
   }, []);
-
   const [name, setName] = useState(product.name || "");
   const [brand, setBrand] = useState(product.brand || "");
   const [rating, setRating] = useState(product.rating || 0);

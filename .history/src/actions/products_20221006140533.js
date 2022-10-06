@@ -43,7 +43,7 @@ export const updateProductForm =
     console.log(data);
     dispatch(updateProduct(id, data));
 
-    history.push("/");
+    //  history.push("/");
   };
 
 export const createProductForm =

@@ -28,7 +28,7 @@ const ProductForm = (props) => {
   useEffect(() => {
     resetErrors();
   }, []);
-
+  const [id, setId] = useState(product.id || "");
   const [name, setName] = useState(product.name || "");
   const [brand, setBrand] = useState(product.brand || "");
   const [rating, setRating] = useState(product.rating || 0);
@@ -46,6 +46,7 @@ const ProductForm = (props) => {
     e.preventDefault();
     resetErrors();
     let data = {
+      id,
       name,
       brand,
       rating,

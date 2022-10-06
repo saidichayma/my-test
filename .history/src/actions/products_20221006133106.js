@@ -42,7 +42,7 @@ export const updateProductForm =
   (dispatch, getState, { history }) => {
     console.log(data);
     dispatch(updateProduct(id, data));
-
+    console.log(data);
     history.push("/");
   };
 

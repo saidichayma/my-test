@@ -8,7 +8,7 @@ import { updateProductForm } from "../../../actions/products";
 
 class UpdateFormContainer extends Component {
   render() {
-    const { product, categories, dispatch, updateProductForm } = this.props;
+    const { product, categories, dispatch, createProductForm } = this.props;
 
     if (!product) {
       return null;
@@ -18,7 +18,7 @@ class UpdateFormContainer extends Component {
       <>
         <Link to="/">Home</Link>
         <ProductForm
-          onSave={(data) => updateProductForm(this.props.productId, data)}
+          onSave={(data) => createProductForm({ ...this.props.product, data })}
           product={product}
           categories={categories}
         />
@@ -31,7 +31,7 @@ UpdateFormContainer.propTypes = {
   product: PropTypes.object,
   categories: PropTypes.array,
   history: PropTypes.object,
-  updateProductForm: PropTypes.func.isRequired,
+  createProductForm: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state, { productId }) => {

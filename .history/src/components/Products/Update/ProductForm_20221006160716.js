@@ -46,6 +46,7 @@ const ProductForm = (props) => {
     e.preventDefault();
     resetErrors();
     let data = {
+      id: id + 1,
       name,
       brand,
       rating,
