@@ -42,8 +42,7 @@ const ProductForm = (props) => {
 
   //Add new products into database
   useEffect(() => {
-    console.log("ErrorHandlers", ErrorHandlers);
-    if (ErrorHandlers && (ErrorHandlers.name || ErrorHandlers.categories)) {
+    if (ErrorHandlers && (name || categories.length > 0)) {
       if (
         !Object.keys(
           isValidForm({ name, categories, receiptDate, expirationDate })
@@ -56,7 +55,7 @@ const ProductForm = (props) => {
           ...isValidForm({ name, categories, receiptDate, expirationDate }),
         }));
     }
-  }, [name, categories]);
+  }, [ErrorHandlers]);
 
   const onSubmit = (e) => {
     e.preventDefault();

@@ -25,7 +25,7 @@ export function products(state = [], action) {
       return state.concat([
         {
           ...action.data,
-          id: ([...state] || []).length + 1,
+          id: [...(state || [])].length,
           featured: isFeatured(action.data),
           createdAt: moment().format(),
         },

@@ -56,7 +56,7 @@ const ProductForm = (props) => {
           ...isValidForm({ name, categories, receiptDate, expirationDate }),
         }));
     }
-  }, [name, categories]);
+  }, [ErrorHandlers]);
 
   const onSubmit = (e) => {
     e.preventDefault();

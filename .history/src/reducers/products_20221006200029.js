@@ -22,10 +22,12 @@ export function products(state = [], action) {
         return item;
       });
     case productsActions.CREATE_PRODUCT:
+      console.clear();
+      console.log("state", state);
       return state.concat([
         {
           ...action.data,
-          id: ([...state] || []).length + 1,
+          id: state.products.length,
           featured: isFeatured(action.data),
           createdAt: moment().format(),
         },
